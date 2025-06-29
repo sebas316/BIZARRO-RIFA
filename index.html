@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rifa Bizarro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    RIFA BIZARRO
+  </header>
+
+  <div class="container">
+    <button onclick="activarAdmin()" class="btn-admin">Soy el administrador</button>
+
+    <div id="adminTools" style="display: none;">
+      <button onclick="mostrarData()" class="btn-ver">Ver información de compradores</button>
+      <button onclick="descargarData()" class="btn-descargar">Descargar datos</button>
+      <pre id="output"></pre>
+    </div>
+
+    <div class="stats" id="stats">Vendidos: 0 | Disponibles: 10000</div>
+    <div class="grid" id="numberGrid"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>Reservar número <span id="modalNumber"></span></h3>
+      <input type="text" id="name" placeholder="Nombre completo" required />
+      <input type="text" id="phone" placeholder="Celular" required />
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+      <button id="confirmBtn">Confirmar</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
